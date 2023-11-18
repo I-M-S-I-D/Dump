@@ -74,17 +74,37 @@
 
   <hr>
 
-  <form action="file:///C:/Users/aruns/Desktop/Fundup/SignUp_1st_draft.html" method="post">
+  <form action="file:///C:/Users/aruns/Desktop/FundUp_2/Dump/option.html" method="post">
     <label for="username">Username/Email:</label>
     <input type="text" id="username" name="username" required><br><br>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required><br><br><br>
-    <button type="submit">Log In</button><br><br><br>
+
+    <button >Log In</button><br><br><br></form>
+
+    <script>
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+
+      const submitButton = document.querySelector('button[type="submit"]');
+
+      submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+
+        // Submit the form to the server (if desired)
+        // form.submit();
+      });
+    </script>
   
 
-  <form action="file:///C:/Users/aruns/Desktop/Fundup/SignUp_2nd_draft.html" method="post">
-    <p> Not Registered ? <button>Sign Up</button> </p>
-  </form>
-</body>
+  <form action="file:///C:/Users/aruns/Desktop/FundUp_2/Dump/SignUp_2nd_draft.html" method="post">
+    <p> Not Registered ? <button>Sign Up</button></p></form>
 
-</html>
+    <script>
+      const signUpButton = document.querySelector('button');
